@@ -4,7 +4,7 @@ const cors = require("cors");
 const path = require("path");
 require("dotenv").config();
 
-const userRoutes = require("./src/routes/webRoutes");
+const webRoutes = require("./src/routes/webRoutes");
 const errorHandler = require("./src/middleware/errorHandler");
 const seedUsers = require("./src/seeders/userSeeder");
 
@@ -33,11 +33,11 @@ mongoose
   })
   .catch((err) => console.log("❌ Erro ao conectar MongoDB:", err));
 
-// Rotas Web (HTML)
-app.use("/", webRoutes);
+
+app.use("/", webRoutes);  // Rotas Web (HTML)
 
 // Rotas API (JSON)
-app.use("/api/users", userRoutes);
+app.use("/api/users",webRoutes);
 
 // Middleware de tratamento de erros (deve estar por último)
 app.use(errorHandler);
