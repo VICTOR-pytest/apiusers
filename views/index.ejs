@@ -1,0 +1,49 @@
+<nav>
+  <a href="/" class="btn btn-secondary">Voltar</a>
+  <a href="/users" class="btn">📋 Listar Usuários</a>
+  <a href="/users/create" class="btn btn-success">➕ Criar Usuário</a>
+</nav>
+
+<% if (message) { %>
+  <div class="alert alert-info">
+    ℹ️ <%= message %>
+  </div>
+<% } %>
+
+<h2>Lista de Usuários</h2>
+
+<% if (users && users.length > 0) { %>
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Data de Criação</th>
+        <th style="text-align: center;">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% users.forEach(user => { %>
+        <tr>
+          <td><strong><%= user.name %></strong></td>
+          <td><%= user.email %></td>
+          <td><%= new Date(user.createdAt).toLocaleDateString('pt-BR') %></td>
+          <td style="text-align: center;">
+            <div class="actions">
+              <a href="/users/edit/<%= user._id %>" class="btn" style="flex: 1; margin-right: 10px;">✏️ Editar</a>
+              <form method="POST" action="/users/delete/<%= user._id %>" style="flex: 1; display: inline-block; margin: 0;">
+                <button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja deletar este usuário?')">🗑️ Deletar</button>
+              </form>
+            </div>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  <p style="margin-top: 20px; color: #666;">Total: <strong><%= users.length %></strong> usuário(s)</p>
+<% } else { %>
+  <div class="empty-state">
+    <p>📭 Nenhum usuário encontrado</p>
+    <a href="/users/create" class="btn btn-success">Criar Primeiro Usuário</a>
+  </div>
+<% } %>

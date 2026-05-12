@@ -1,0 +1,61 @@
+<nav>
+  <a href="/users" class="btn btn-secondary">⬅️ Voltar</a>
+</nav>
+
+<div class="form-container">
+  <h2 style="margin-bottom: 30px;">➕ Criar Novo Usuário</h2>
+
+  <% if (error) { %>
+    <div class="alert alert-danger">
+      ❌ <%= error %>
+    </div>
+  <% } %>
+
+  <form method="POST" action="/users">
+    <div class="form-group">
+      <label for="name">Nome Completo *</label>
+      <input 
+        type="text" 
+        id="name" 
+        name="name" 
+        placeholder="Digite o nome completo"
+        required
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email *</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        placeholder="Digite o email"
+        required
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="password">Senha *</label>
+      <input 
+        type="password" 
+        id="password" 
+        name="password" 
+        placeholder="Digite uma senha segura"
+        required
+        minlength="6"
+      >
+    </div>
+
+    <div style="display: flex; gap: 10px;">
+      <button type="submit" class="btn btn-success" style="flex: 1;">✅ Criar Usuário</button>
+      <a href="/users" class="btn btn-secondary" style="flex: 1; text-align: center;">❌ Cancelar</a>
+    </div>
+  </form>
+
+  <div class="card" style="margin-top: 30px;">
+    <h3>💡 Dicas de Segurança</h3>
+    <p>✓ Use uma senha com pelo menos 6 caracteres</p>
+    <p>✓ Use emails válidos e únicos</p>
+    <p>✓ Evite informações pessoais sensíveis</p>
+  </div>
+</div>
