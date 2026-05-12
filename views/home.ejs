@@ -1,36 +1,59 @@
-<nav>
-  <a href="/api/users" class="btn" style="background: #0066cc;">📡 API JSON</a>
-  <a href="/users" class="btn btn-success">👥 Gerenciar Usuários</a>
-</nav>
-
-<div style="text-align: center; padding: 60px 20px;">
-  <h2>Bem-vindo ao User API! 👋</h2>
+<!-- Hero Section -->
+<div class="hero-section">
+  <h2 class="hero-title">Bem-vindo! 👋</h2>
+  <p class="hero-subtitle">Sistema de Gerenciamento de Usuários</p>
+  <p class="hero-description">Gerencie seus usuários com uma interface moderna e intuitiva. Acesse a API RESTful para integração com suas aplicações.</p>
   
-  <div class="card" style="margin-top: 30px; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto;">
-    <h3>🚀 Começar</h3>
-    <p style="margin: 15px 0;">
-      <a href="/users" style="color: #667eea; text-decoration: none; font-weight: 600;">👥 Ir para Gerenciador de Usuários →</a>
-    </p>
-    <p style="margin: 15px 0;">
-      <a href="/api/users" style="color: #667eea; text-decoration: none; font-weight: 600;">📡 Acessar API JSON →</a>
-    </p>
+  <!-- CTA Buttons -->
+  <div class="cta-buttons">
+    <a href="/users" class="btn">👥 Gerenciar Usuários</a>
+    <a href="/api/users" class="btn btn-secondary">📡 API JSON</a>
+  </div>
+</div>
+
+<!-- Features Grid -->
+<div class="features-grid">
+  <div class="feature-card">
+    <span class="feature-icon">🌐</span>
+    <h3>Interface Web</h3>
+    <p>Gerencie usuários de forma visual, intuitiva e responsiva. Crie, edite e delete usuários com facilidade.</p>
   </div>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
-    <div class="card" style="text-align: left;">
-      <h3>💼 Interface Web</h3>
-      <p>Gerenciar usuários de forma visual e intuitiva</p>
-    </div>
-    <div class="card" style="text-align: left;">
-      <h3>🔌 API RESTful</h3>
-      <p>Respostas em JSON para integração com aplicações</p>
-    </div>
+  <div class="feature-card">
+    <span class="feature-icon">⚡</span>
+    <h3>API RESTful</h3>
+    <p>Acesse dados em JSON e integre com suas aplicações. Endpoints rápidos e confiáveis para produção.</p>
   </div>
 
-  <div class="card" style="margin-top: 30px; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto; background: #d1ecf1; border-left-color: #0c5460;">
-    <h3>ℹ️ Usuários de Teste</h3>
-    <p><strong>Email:</strong> teste@email.com</p>
-    <p><strong>Senha:</strong> 123456</p>
-    <p style="margin-top: 15px; font-size: 0.9em; color: #555;">Mais 2 usuários de teste foram criados automaticamente ao iniciar a aplicação</p>
+  <div class="feature-card">
+    <span class="feature-icon">🔐</span>
+    <h3>Seguro</h3>
+    <p>Dados protegidos com validação de entrada e tratamento de erros robusto em toda aplicação.</p>
   </div>
+
+  <div class="feature-card">
+    <span class="feature-icon">💾</span>
+    <h3>MongoDB</h3>
+    <p>Banco de dados NoSQL escalável. Perfeito para aplicações modernas e em crescimento.</p>
+  </div>
+
+  <div class="feature-card">
+    <span class="feature-icon">📱</span>
+    <h3>Responsivo</h3>
+    <p>Funciona perfeitamente em desktop, tablet e mobile com design adaptativo.</p>
+  </div>
+
+  <div class="feature-card">
+    <span class="feature-icon">⚙️</span>
+    <h3>Node.js + Express</h3>
+    <p>Construído com tecnologias modernas e práticas recomendadas de desenvolvimento.</p>
+  </div>
+</div>
+
+<!-- Test Credentials -->
+<div class="test-credentials">
+  <h3>🔑 Credenciais de Teste</h3>
+  <p><span class="credential-label">Email:</span> <span class="credential-value">teste@email.com</span></p>
+  <p><span class="credential-label">Senha:</span> <span class="credential-value">123456</span></p>
+  <p style="margin-top: 20px; font-size: 0.95em; color: #888;">ℹ️ Mais 2 usuários de teste foram criados automaticamente ao iniciar a aplicação</p>
 </div>
