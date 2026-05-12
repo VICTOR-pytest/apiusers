@@ -4,7 +4,7 @@ const cors = require("cors");
 const path = require("path");
 require("dotenv").config();
 
-const userRoutes = require("./src/route/user");
+
 const webRoutes = require("./src/route/webRoutes");
 const errorHandler = require("./src/middleware/errorHandler");
 const seedUsers = require("./src/seeders/userSeeder");
