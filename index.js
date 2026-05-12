@@ -5,6 +5,7 @@ const path = require("path");
 require("dotenv").config();
 
 const webRoutes = require("./src/route/webRoutes");
+const apiRoutes = require("./src/route/apiRoutes");
 const errorHandler = require("./src/middleware/errorHandler");
 const seedUsers = require("./src/seeders/userSeeder");
 
@@ -37,7 +38,7 @@ mongoose
 app.use("/", webRoutes);  // Rotas Web (HTML)
 
 // Rotas API (JSON)
-app.use("/api/users",webRoutes);
+app.use("/api/users", apiRoutes);
 
 // Middleware de tratamento de erros (deve estar por último)
 app.use(errorHandler);
