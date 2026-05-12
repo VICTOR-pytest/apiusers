@@ -11,16 +11,20 @@ exports.home = (req, res) => {
 exports.listUsers = async (req, res) => {
   try {
     const users = await User.find().select("-password");
+
     res.render("index", { 
       title: "Usuários",
       users,
-      message: req.query.message
+      message: req.query.message || null,
+      error: req.query.error || null
     });
+
   } catch (error) {
     res.render("index", { 
       title: "Usuários",
       users: [],
-      error: error.message 
+      message: null,
+      error: error.message
     });
   }
 };
